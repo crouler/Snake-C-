@@ -10,38 +10,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-<<<<<<< Updated upstream
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
 
-            int x2 = 4;
-            int y2 = 5;
-            char sym2 = '#';
-
-            Draw(x1, y1, sym1);
-            Draw(x2, y2, sym2);
-=======
-            Point p1 = new Point();
-            p1.x = 1;
-            p1.y = 3;
-            p1.sym = '*';
+            Point p1 = new Point(1, 3,'*') ;
             p1.Draw();
 
-            Point p2 = new Point();
-            p2.x = 4;
-            p2.y = 5;
-            p2.sym = '#';
+            Point p2 = new Point(4,5,'#');
             p2.Draw();
->>>>>>> Stashed changes
+
 
             Console.ReadLine();
 
-            void Draw(int x, int y, char sym) {
-                Console.SetCursorPosition(x, y);
-                Console.WriteLine(sym);
-                
-            }
+
 
             
 
