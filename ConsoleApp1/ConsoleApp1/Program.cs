@@ -10,30 +10,33 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-            //Point p1 = new Point(1, 3,'*') ;
-            //p1.Draw();
-
-            //Point p2 = new Point(4,5,'#');
-            //p2.Draw();
-
-            //Point p3 = new Point(8, 2, '&');
-
-            //Point p4 = new Point(5, 3, '$');
-
-            //List<Point> plist = new List<Point>();
-
-            HorizontalLine line = new HorizontalLine(2, 10, 5, '0');
-            line.DrawHorline();
-
-            VerticalLine Vline = new VerticalLine(5, 10, 2, '1');
-            Vline.DrawVertLine();
+            Console.SetWindowSize(80, 28);
+           // Console.SetCursorPosition(10, 4);
+            //Console.WriteLine("Height = " + Console.BufferHeight.ToString() + ",  Width = " + Console.BufferWidth.ToString());
+            
+            Console.SetBufferSize(Convert.ToInt16(80), Convert.ToInt16(28));
+           // Console.SetCursorPosition(10,5);
+           // Console.WriteLine("Height = " + Console.BufferHeight.ToString() + ",  Width = " + Console.BufferWidth.ToString());
 
 
+            HorizontalLine upline = new HorizontalLine(0, 79, 0, '+');
+            HorizontalLine downline = new HorizontalLine(0, 79, 25, '+');
+             upline.Drawline();
+             downline.Drawline();
+
+           VerticalLine leftline = new VerticalLine(0, 24, 0, '+');
+           VerticalLine rightline = new VerticalLine(0, 24, 79, '+');
+           leftline.Drawline();
+           rightline.Drawline();
+
+            Point p = new Point(8,5,'*');
+
+           Snake snake = new Snake(p, 3, Direction.RIGHT);
+           snake.Drawline();
+           
 
 
-          
-
+           // Console.SetCursorPosition(0, 0);
             Console.ReadLine();
 
 

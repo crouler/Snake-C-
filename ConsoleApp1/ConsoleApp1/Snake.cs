@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class HorizontalLine : Figure
+    class Snake : Figure
     {
-        public  HorizontalLine(int xLeft, int xRight, int y, char sym)
-        {
-            plist = new List<Point>();
-            for (int x = xLeft; x <= xRight; x++) {
-                Point p = new Point(x, y, sym);
-                plist.Add(p);
+        public Snake(Point tale, int length, Direction direction) {
 
+            plist = new List<Point>();
+            for (int i = 0; i < length; i++) {
+                Point p = new Point(tale);
+                p.Move(i, direction);
+                plist.Add(p);
             }
+
             
         }
-
-
-
     }
 }
