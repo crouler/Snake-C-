@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
@@ -31,12 +32,31 @@ namespace ConsoleApp1
 
             Point p = new Point(8,5,'*');
 
-           Snake snake = new Snake(p, 3, Direction.RIGHT);
+           Snake snake = new Snake(p, 5, Direction.RIGHT);
            snake.Drawline();
-           
+
+            snake.move();
+            Thread.Sleep(300);
+
+            snake.move();
+            Thread.Sleep(300);
+
+            snake.move();
+            Thread.Sleep(300);
+
+            snake.move();
+            Thread.Sleep(300);
+
+            snake.move();
+            Thread.Sleep(300);
 
 
-           // Console.SetCursorPosition(0, 0);
+
+
+
+
+
+            // Console.SetCursorPosition(0, 0);
             Console.ReadLine();
 
 

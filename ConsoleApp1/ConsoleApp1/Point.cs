@@ -60,14 +60,17 @@ namespace ConsoleApp1
         }
 
 
-            
-
-        
 
         public void Draw() {
             Console.SetCursorPosition(x, y);
             Console.WriteLine(sym);
         }
+
+        public void Clear() {
+            sym = ' ';
+            Draw();
+        }
+
 
         public override string ToString()
         {
