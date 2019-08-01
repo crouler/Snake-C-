@@ -30,26 +30,22 @@ namespace ConsoleApp1
            leftline.Drawline();
            rightline.Drawline();
 
-            Point p = new Point(8,5,'*');
+            Point p = new Point(8, 5, '*');
 
            Snake snake = new Snake(p, 5, Direction.RIGHT);
            snake.Drawline();
 
-            snake.move();
-            Thread.Sleep(300);
+            
 
-            snake.move();
-            Thread.Sleep(300);
+            while (true) {
+                if (Console.KeyAvailable) {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key);
 
-            snake.move();
-            Thread.Sleep(300);
-
-            snake.move();
-            Thread.Sleep(300);
-
-            snake.move();
-            Thread.Sleep(300);
-
+                }
+                Thread.Sleep(100);
+                snake.move();
+            }
 
 
 

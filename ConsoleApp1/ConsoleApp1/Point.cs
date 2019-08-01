@@ -29,21 +29,21 @@ namespace ConsoleApp1
 
         public void Move(int ofset, Direction dir)
         {
-            /*switch (dir) {
-                case ('RIGHT'):
+           switch (dir) {
+                case Direction.RIGHT:
                     x = x + ofset;
                     break;
-                case LEFT:
+                case Direction.LEFT:
                     x = x - ofset;
                     break;
-                case UP:
+                case Direction.UP:
                     y = y - ofset;
                     break;
-                case DOWN:
+                case Direction.DOWN:
                     y = y + ofset;
-                    break;*/
+                    break;
 
-            if (dir == Direction.RIGHT) {
+            /*if (dir == Direction.RIGHT) {
                 x = x + ofset;
             }
 
@@ -55,7 +55,7 @@ namespace ConsoleApp1
                 y = y - ofset;
             }
             else if (dir == Direction.DOWN){
-                y = y + ofset;
+                y = y + ofset;*/
             }
         }
 

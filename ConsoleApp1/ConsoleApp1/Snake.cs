@@ -44,7 +44,19 @@ namespace ConsoleApp1
             nextpoint.Move(1, dir);
             return nextpoint;
 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+        }
+
+        public void HandleKey(ConsoleKeyInfo key)
+        {
+            if (key.Key == ConsoleKey.LeftArrow)
+            { dir = Direction.LEFT; }
+            else if (key.Key == ConsoleKey.RightArrow)
+            { dir = Direction.RIGHT; }
+            else if (key.Key == ConsoleKey.UpArrow)
+            { dir = Direction.UP; }
+            else if (key.Key == ConsoleKey.DownArrow)
+            { dir = Direction.DOWN; }
         }
     }
 }
