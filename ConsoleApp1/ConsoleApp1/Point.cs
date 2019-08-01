@@ -77,5 +77,14 @@ namespace ConsoleApp1
             return x + ", " + y + ", " + sym;
         }
 
+        public bool IsHit(Point food)
+        {
+            
+            if (this.x == food.x && this.y == food.y)
+                return true;
+            else
+                return false;
+            //throw new NotImplementedException();
+        }
     }
 }

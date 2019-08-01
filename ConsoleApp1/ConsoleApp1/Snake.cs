@@ -24,7 +24,7 @@ namespace ConsoleApp1
             
         }
 
-        internal void move()
+        public void move()
         {
             Point tail = plist.First();
             plist.Remove(tail);
@@ -57,6 +57,19 @@ namespace ConsoleApp1
             { dir = Direction.UP; }
             else if (key.Key == ConsoleKey.DownArrow)
             { dir = Direction.DOWN; }
+        }
+
+        public bool Eat(Point food)
+        { Point headNext = GetNextPoint();
+            if (headNext.IsHit(food))
+            {
+                food.sym = plist.Last().sym;
+                plist.Add(food);
+                food.Draw();
+                return true;
+            }
+            else return false; 
+            //throw new NotImplementedException();
         }
     }
 }
