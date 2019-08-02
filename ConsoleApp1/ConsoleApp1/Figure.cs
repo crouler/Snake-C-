@@ -17,5 +17,28 @@ namespace ConsoleApp1
                 p.Draw();
             }
         }
+
+        internal bool isHit(Figure figure)
+        {
+            foreach (var p in plist)
+            {
+                if (figure.isHit(p))
+                    return true;
+                 
+            }
+            return false;
+            //throw new NotImplementedException();
+        }
+
+        private bool isHit(Point point)
+        {
+            foreach (var p in plist)
+            {
+                if (p.IsHit(point))
+                    return true;
+                
+            }
+            return false;
+        }
     }
 }
